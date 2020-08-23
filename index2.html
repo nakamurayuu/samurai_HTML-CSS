@@ -5,30 +5,19 @@
     <title>JavaScriptの練習</title>
   </head>
   <body>
-    
-    
     <script>
-       const myAnimal = '猫';
-       
-       switch(myAnimal) {
-         case'犬':
-           console.log('ワンワン！');
-           break;
-         case'猫':
-           console.log('ニャー！');
-           break;
-         case'牛':
-           console.log('モー！');
-           break;
-         case'ライオン':
-           console.log('ガオー！');
-           break;
-         case'豚':
-           console.log('ぶー！');
-           break;
-         default:
-           console.log('該当する鳴き声がありません');
-       }
+    const user = {
+        
+      name: '山田太郎',
+      age: 30,
+
+      getName: function() {
+        console.log(this.name);
+      }
+    
+    }
+
+    user.getName();
     </script>
   </body>
 </html>
