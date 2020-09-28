@@ -18,151 +18,52 @@
      left: 5px;
  }
  
- #one{
+ .circle1{
   width:30px;
   height:30px;
   background:white;
   border-radius:100%;
   border: 2px solid skyblue;
  }
-  #two{
-  width:30px;
-  height:30px;
-  background:white;
-  border-radius:100%;
-  border: 2px solid skyblue;
-
- }
- #three{
-  width:30px;
-  height:30px;
-  background:white;
-  border-radius:100%;
-  border: 2px solid skyblue;
- }
- #four{
-  width:30px;
-  height:30px;
-  background:white;
-  border-radius:100%;
-  border: 2px solid skyblue;
- }
- #five{
-  width:30px;
-  height:30px;
-  background:white;
-  border-radius:100%;
-  border: 2px solid skyblue;
- }
- #six{
-  width:30px;
-  height:30px;
-  background:white;
-  border-radius:100%;
-  border: 2px solid skyblue;
- }
-#seven{
-  width:30px;
-  height:30px;
-  background:white;
-  border-radius:100%;
-  border: 2px solid skyblue;
- }
- #eight{
-  width:30px;
-  height:30px;
-  background:white;
-  border-radius:100%;
-  border: 2px solid skyblue;
- }
- #nine{
-  width:30px;
-  height:30px;
-  background:white;
-  border-radius:100%;
-  border: 2px solid skyblue;
- }
- #zero{
-  width:30px;
-  height:30px;
-  background:white;
-  border-radius:100%;
-  border: 2px solid skyblue;
- }
-  #division{
+  
+.circle2{
   width:30px;
   height:30px;
   background:white;
   border-radius:100%;
   border: 2px solid yellow;
  }
- #multiplication{
-  width:30px;
-  height:30px;
-  background:white;
-  border-radius:100%;
-  border: 2px solid yellow;
- }
- #subtraction{
-  width:30px;
-  height:30px;
-  background:white;
-  border-radius:100%;
-  border: 2px solid yellow;
- }
- #addition{
-  width:30px;
-  height:30px;
-  background:white;
-  border-radius:100%;
-  border: 2px solid yellow;
- }
- #equal{
-  width:30px;
-  height:30px;
-  background:white;
-  border-radius:100%;
-  border: 2px solid yellow;
- }
-#clear{
-  width:30px;
-  height:30px;
-  background:white;
-  border-radius:100%;
-  border: 2px solid yellow;
-}
-
     </style>
 </head>
 <body>
   <div id="answer"></div>
    
 　<div>
-    <button id="seven">7</button>
-    <button id="eight">8</button>
-    <button id="nine">9</button>
-    <button id="division">÷</button>
+    <button id="seven" class="circle1">7</button>
+    <button id="eight" class="circle1">8</button>
+    <button id="nine" class="circle1">9</button>
+    <button id="division" class="circle2">÷</button>
   </div>
   
   <div>
-      <button id="four">4</button>
-      <button id="five">5</button>
-      <button id="six">6</button>
-      <button id="multiplication">×</button>
+      <button id="four" class="circle1">4</button>
+      <button id="five" class="circle1">5</button>
+      <button id="six"class="circle1">6</button>
+      <button id="multiplication" class="circle2">×</button>
   </div>
   
   <div>
-     <button id="one">1</button>
-     <button id="two">2</button>
-     <button id="three">3</button>
-     <button id="subtraction">-</button>
+     <button id="one" class="circle1">1</button>
+     <button id="two" class="circle1">2</button>
+     <button id="three" class="circle1">3</button>
+     <button id="subtraction" class="circle2">-</button>
   </div>
   
   <div>
-     <button id="zero">0</button>
-     <button id="addition">+</button>
-     <button id="equal">=</button>
-     <button id="clear">ac</button>
+     <button id="zero" class="circle1">0</button>
+     <button id="addition" class="circle2">+</button>
+     <button id="equal" class="circle2">=</button>
+     <button id="clear" class="circle2">ac</button>
   </div>
 </body>
 
@@ -185,99 +86,111 @@ let number2 =""
   
  const two = document.getElementById('two');
   two.addEventListener('click', () => {
-    if (mark==""){
-    answer.innerText = answer.innerText+'2';
+   if (mark==""){
+      number1 = number1+'2';
+      answer.innerText = number1;
     }
-    else if(number1==""){
-        answer.innerText='2';
+    else {
+      number2 = number2+'2';
+        answer.innerText=number2;
     }
-    else{
-     answer.innerText = answer.innerText+'2';
-    }
-  });    
+  }); 
   
  const three = document.getElementById('three');
  three.addEventListener('click', () => {
      if (mark==""){
-     answer.innerText = answer.innerText+'3';
-     }
-     else if(number1==""){
-        answer.innerText='3';
+      number1 = number1+'3';
+      answer.innerText = number1;
     }
-    else{
-     answer.innerText = answer.innerText+'3';
+    else {
+      number2 = number2+'3';
+        answer.innerText=number2;
     }
-  });       
+  });  
  
  const four = document.getElementById('four');
  four.addEventListener('click',() => {
      if (mark==""){
-     answer.innerText = answer.innerText+'4';
-     }
-     else {
-         answer.innerText='4';
-     }
-  });       
+      number1 = number1+'4';
+      answer.innerText = number1;
+    }
+    else {
+      number2 = number2+'4';
+        answer.innerText=number2;
+    }
+  }); 
  
  const five = document.getElementById('five');
  five.addEventListener('click', () => {
      if (mark==""){
-     answer.innerText = answer.innerText+'5';
-     }
-     else {
-         answer.innerText='5';
-     }
-  });       
+      number1 = number1+'5';
+      answer.innerText = number1;
+    }
+    else {
+      number2 = number2+'5';
+        answer.innerText=number2;
+    }
+  });   
 
  const six = document.getElementById('six');
  six.addEventListener('click', () => {
      if (mark==""){
-     answer.innerText = answer.innerText+'6';
-     }
-     else {
-         answer.innerText='6';
-     }
-  });       
+      number1 = number1+'6';
+      answer.innerText = number1;
+    }
+    else {
+      number2 = number2+'6';
+        answer.innerText=number2;
+    }
+  });    
 
  const seven = document.getElementById('seven');
  seven.addEventListener('click', () => {
-     if (mark==""){
-     answer.innerText = answer.innerText+'7';
-     }
-     else {
-         answer.innerText='7';
-     }
-  });       
+    if (mark==""){
+      number1 = number1+'7';
+      answer.innerText = number1;
+    }
+    else {
+      number2 = number2+'7';
+        answer.innerText=number2;
+    }
+  }); 
 
  const eight = document.getElementById('eight');
  eight.addEventListener('click',() => {
      if (mark==""){
-     answer.innerText = answer.innerText+'8';
-     }
-     else {
-         answer.innerText='8';
-     }
-  });       
+      number1 = number1+'8';
+      answer.innerText = number1;
+    }
+    else {
+      number2 = number2+'8';
+        answer.innerText=number2;
+    }
+  });
 
  const nine = document.getElementById('nine');
  nine.addEventListener('click', () => {
      if (mark==""){
-     answer.innerText = answer.innerText+'9';
-     }
-     else {
-         answer.innerText='9';
-     }
-  });       
+      number1 = number1+'9';
+      answer.innerText = number1;
+    }
+    else {
+      number2 = number2+'9';
+        answer.innerText=number2;
+    }
+  });
 
  const zero = document.getElementById('zero');
  zero.addEventListener('click', () => {
      if (mark==""){
-     answer.innerText = answer.innerText+'0';
-     }
-     else {
-         answer.innerText='0';
-     }
-  });       
+      number1 = number1+'0';
+      answer.innerText = number1;
+    }
+    else {
+      number2 = number2+'0';
+        answer.innerText=number2;
+    }
+  });
 
  const division = document.getElementById('division');
  division.addEventListener('click', () => {
